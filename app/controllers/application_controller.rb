@@ -37,6 +37,6 @@ class ApplicationController < Sinatra::Base
   patch 'recipes/:id' do
     @recipe = Recipe.find(params[:id])
     new_info = {name: params[:name], cook_time: params[:cook_time], ingredients: params[:ingredients]}
-    @recipe.update
+    @recipe.update(new_info)
   end
 end
