@@ -16,7 +16,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get 'recipes/:id/edit' do
-    binding.pry
     @recipe = Recipe.find(params[:id])
     erb :edit
   end
