@@ -27,6 +27,5 @@ class ApplicationController < Sinatra::Base
   end
 
   patch 'recipes/:id' do
-    binding.pry
   end
 end
