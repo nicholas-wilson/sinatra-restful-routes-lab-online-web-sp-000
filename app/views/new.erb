@@ -9,13 +9,13 @@
     <form action="/recipes/<%=@recipe.id%>" method="post">
 
       <label for="recipe_name"></label>
-      <input type="text" id="recipe_name" name="name" value="<%=@recipe.name%>">
+      <input type="text" id="recipe_name" name="name">
 
       <label for="recipe_ingredients"></label>
-      <input type="text" id="recipe_ingredients" name="ingredients" value="<%=@recipe.ingredients%>">
+      <input type="text" id="recipe_ingredients" name="ingredients">
 
       <label for="recipe_cook_time"></label>
-      <input type="text" id="recipe_cook_time" name="cook_time" value="<%=@recipe.cook_time%>">
+      <input type="text" id="recipe_cook_time" name="cook_time">
 
       <input type="submit" value="Submit">
     </form>
