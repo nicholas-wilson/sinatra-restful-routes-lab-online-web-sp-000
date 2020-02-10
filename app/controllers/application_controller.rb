@@ -25,4 +25,8 @@ class ApplicationController < Sinatra::Base
     recipe.destroy
     redirect '/recipes'
   end
+
+  patch 'recipes/:id' do
+    binding.pry
+  end
 end
