@@ -14,6 +14,10 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
+  post '/recipes' do
+    recipe = Recipe.new(params)
+  end
+
   get '/recipes/:id' do
     @recipe = Recipe.find(params[:id])
     erb :show
@@ -31,5 +35,8 @@ class ApplicationController < Sinatra::Base
   end
 
   patch 'recipes/:id' do
+    @recipe = Recipe.find(params[:id])
+    new_info = {name: params[:name], cook_time: params[:cook_time], ingredients: params[:ingredients]}
+    @recipe.update
   end
 end
