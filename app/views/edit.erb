@@ -5,9 +5,10 @@
     <title>Recipe</title>
   </head>
   <body>
-    <h3><%=@recipe.name%></h3>
+    <h3>Edit the recipe</h3>
     <form action="/recipes/<%=@recipe.id%>" method="post">
       <input type="hidden" id="hidden" name="_method" value="PATCH">
+      <label for="recipe_name"></label><input type="text" id="recipe_name" name="" value="">
     </form>
   </body>
 </html>
